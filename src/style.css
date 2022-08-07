@@ -1,0 +1,52 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+
+.day-time {
+  margin-bottom: 8px;
+}
+
+.city-header {
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+
+.weather-description {
+  font-size: 30px;
+}
+
+.main-temperature {
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 80px;
+  line-height: 60px;
+  position: relative;
+  left: 25px;
+}
+
+.degrees {
+  position: relative;
+  bottom: 40px;
+  left: 20px;
+}
+
+.temperature-low-high {
+  font-size: 30px;
+}
