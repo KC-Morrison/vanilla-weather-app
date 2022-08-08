@@ -35,6 +35,8 @@ li {
 
 .weather-description {
   font-size: 30px;
+}
+.weather-description::first-letter {
   text-transform: capitalize;
 }
 
