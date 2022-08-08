@@ -35,6 +35,7 @@ li {
 
 .weather-description {
   font-size: 30px;
+  text-transform: capitalize;
 }
 
 .main-temperature {
