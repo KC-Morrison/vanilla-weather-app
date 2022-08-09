@@ -25,6 +25,12 @@ li {
 
 .day-time {
   margin-bottom: 8px;
+  display: inline;
+}
+
+.icon {
+  display: inline;
+  height: 50px;
 }
 
 .city-header {
