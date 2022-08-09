@@ -63,3 +63,9 @@ li {
 .temperature-low-high {
   font-size: 20px;
 }
+
+.weather-today .active {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
