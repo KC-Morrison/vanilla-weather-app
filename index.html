@@ -16,28 +16,35 @@
   <body>
     <div class ="container">
       <div class="weather-app">
-        <form id="search-form">
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+        <form class="search-form" id="search-form">
           <div class="row">
             <div class="col-8">
-           <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autocomplete="off">
+           <input type="search" placeholder="Type a city..." class="form-control shadow-sm" id="city-input" autocomplete="off">
            </div>
            <div class="col-3">
-           <input type="submit" value="Search" class="btn btn-primary">
+           <input type="submit" value="Search" class="btn btn-primary shadow-sm">
            </div>
           </div>
         </form>
+  </div>
+  <div class="col-sm-12 col-md-6">
         <div class="row">
-        <div class="weather-today col-lg-6">
+        <div class="weather-today ">
        <p class = "day-time" id="date">Monday 11:30</p>
         <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="cloudy weather icon" class="icon"id="icon">
-       <p class="city-header" id="city">San Francisco</p>
+       <p class="city-header" id="city">Sydney</p>
       
        <p class = "weather-description" id="description">Cloudy</p>
        <p> <span class="main-temperature" id="temperature">16</span> <span class="degrees"> <a href="#" id="celsius-link" class="active">°C</a>  | <a href="#" id="fahrenheit-link">°F</a> </span></p>
-       <P class="temperature-low-high" >Low 13°C - High 18°C</P>
+       <P class="temperature-low-high">Low <span id="low">13</span>°C - High <span id="high">18</span>°C</P>
        <p>Humidity <span id="humidity">13</span>% - Wind <span id="wind">18</span>km/h</p>
         </div>
-        <div class="weather-future col-lg-6">
+      </div>
+
+</div>
+        <!--<div class="weather-future col-lg-6">
        <ul>
          <li>Day 1</li>
          <li>Day 2</li>
@@ -45,9 +52,9 @@
          <li>Day 4</li>
          <li>Day 5</li>
        </ul>
-       </div> <!-- end of future weather div-->
+       </div> --> <!-- end of future weather div--> 
       </div> <!--end of row-->
-       <small><a href="https://github.com/KC-Morrison/vanilla-weather-app" target="_blank">Open-source code</a> by Katie Morrison</small>
+       <small class="credits"><a href="https://github.com/KC-Morrison/vanilla-weather-app" target="_blank">Open-source code</a> by Katie Morrison</small>
       </div> <!-- end of weather app div-->
     </div> <!-- end of container-->
     <script src="src/app.js"></script>
