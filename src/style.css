@@ -1,79 +1,91 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
+	font-family: "Montserrat", sans-serif;
+	text-align: center;
 }
 
 ul {
-  padding: 0;
+	padding: 0;
 }
 
 li {
-  list-style: none;
+	list-style: none;
 }
 
 .credits {
-  float: left;
+	float: left;
 }
 
 div.weather-app {
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
+	max-width: 700px;
+	margin: 30px auto;
+	padding: 20px;
+	border: 1px solid #dadde1;
+	border-radius: 5px;
 }
 
 .search-form {
-  margin-top: 12px;
+	margin-top: 12px;
 }
 
 .weather-today {
-  line-height: 1.2;
+	line-height: 1.2;
 }
 
 .day-time {
-  margin-bottom: 8px;
-  display: inline;
+	margin-bottom: 8px;
+	display: inline;
 }
 
 .icon {
-  display: inline;
-  height: 50px;
+	display: inline;
+	height: 50px;
 }
 
 .city-header {
-  font-family: "Bungee Shade", sans-serif;
-  font-size: 40px;
-  margin-bottom: 5px;
+	font-family: "Bungee Shade", sans-serif;
+	font-size: 40px;
+	margin-bottom: 5px;
 }
 
 .weather-description {
-  font-size: 20px;
+	font-size: 20px;
 }
 .weather-description::first-letter {
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .main-temperature {
-  font-family: "Bungee Shade", sans-serif;
-  font-size: 80px;
-  line-height: 60px;
-  position: relative;
-  left: 25px;
+	font-family: "Bungee Shade", sans-serif;
+	font-size: 80px;
+	line-height: 60px;
+	position: relative;
+	left: 25px;
 }
 
 .degrees {
-  position: relative;
-  bottom: 40px;
-  left: 20px;
+	position: relative;
+	bottom: 40px;
+	left: 20px;
 }
 
 .temperature-low-high {
-  font-size: 17px;
+	font-size: 17px;
 }
 
 .weather-today .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
+	color: black;
+	cursor: default;
+	text-decoration: none;
+}
+
+.weather-forecast {
+	text-align: center;
+}
+
+.weather-forecast-date {
+	font-size: 16px;
+}
+
+.weather-forecast-tmperatures {
+	font-size: 13px;
 }
