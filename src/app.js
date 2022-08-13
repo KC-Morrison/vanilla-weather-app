@@ -24,8 +24,8 @@ function formatDate(timestamp) {
 function displayForecast() {
 	let forecastElement = document.querySelector("#forecast"); //target the HTML element
 
-	let forecastHTML = `<div class="row">`;
-	forecastHTML =
+	let forecastHTML = `<div class="row">`; //we want this to be a row because we want a grid
+	forecastHTML = //now we inject the HTML
 		forecastHTML +
 		`
           <div class="col-2">
@@ -36,12 +36,11 @@ function displayForecast() {
               <span class="weather-forecast-temperature-max">18°</span>
             </div>
           </div>
-          </div>
+          
         `;
 	forecastHTML =
 		forecastHTML +
 		`
-    
   <div class="col-2">
             <div class="weather-forecast-date">Thu</div>
             <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" />
@@ -50,8 +49,6 @@ function displayForecast() {
               <span class="weather-forecast-temperature-max">18°</span>
             </div>
           </div>
-          
-
   `;
 	forecastHTML = forecastHTML + `</div>`;
 	forecastElement.innerHTML = forecastHTML;
