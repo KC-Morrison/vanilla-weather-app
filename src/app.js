@@ -21,7 +21,9 @@ function formatDate(timestamp) {
 	return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+	//receives the response from the API call to get forecast data
+	console.log(response.data.daily);
 	let forecastElement = document.querySelector("#forecast"); //target the HTML element
 	let forecastHTML = `<div class="row">`; //we want this to be a row because we want a grid
 	let days = ["Thu", "Fri", "Sat"];
@@ -43,6 +45,15 @@ function displayForecast() {
 
 	forecastHTML = forecastHTML + `</div>`;
 	forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+	//this function makes the API call to get the forecast
+	//console.log(coordinates);
+	let apiKey = "8ccf37f47c78fce7cbde0d0a29369196";
+	let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+	//console.log(apiUrl);
+	axios.get(apiUrl).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -69,12 +80,14 @@ function displayTemperature(response) {
 	iconElement.setAttribute("alt", response.data.weather[0].description);
 	lowElement.innerHTML = Math.round(response.data.main.temp_min);
 	highElement.innerHTML = Math.round(response.data.main.temp_max);
+
+	getForecast(response.data.coord); //we need to get the coordinates for city to do the forecast API call
 }
 
 function search(city) {
 	let apiKey = "8ccf37f47c78fce7cbde0d0a29369196";
 	let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-	console.log(apiUrl);
+	//console.log(apiUrl);
 	axios.get(apiUrl).then(displayTemperature);
 }
 
@@ -113,4 +126,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Sydney"); //this calls the search function on load and sends it the value Sydney
-displayForecast();
