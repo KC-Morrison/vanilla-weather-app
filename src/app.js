@@ -40,17 +40,18 @@ function displayForecast(response) {
 	//the forEach function returns an index. Index gives each item/day in the array a number from 0 upwards
 	forecast.forEach(function (forecastDay, index) {
 		if (index < 6) {
+			//this says the forEach will loop so long as the index is less than 6 which gives us 6 days (starts at 0)
 			forecastHTML = //now we inject the HTML
 				forecastHTML +
 				`
-          <div class="col-2">
+          <div class="col-2 forecast-day">
             <div class="weather-forecast-date">${formatDay(
 							forecastDay.dt
 						)}</div>
-            <img src="http://openweathermap.org/img/wn/${
+            <img class="forecast-icon" src="http://openweathermap.org/img/wn/${
 							forecastDay.weather[0].icon
 						}@2x.png" />
-            <div class="weather-forecast-tmperatures">
+            <div class="weather-forecast-temperatures">
               <span class="weather-forecast-temperature-min">${Math.round(
 								forecastDay.temp.min
 							)}°</span>
