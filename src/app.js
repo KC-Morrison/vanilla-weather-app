@@ -21,26 +21,47 @@ function formatDate(timestamp) {
 	return `${day} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+	//this function converts the dt into readable days for the forecast
+	let date = new Date(timestamp * 1000);
+	let day = date.getDay();
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+	return days[day];
+}
+
 function displayForecast(response) {
 	//receives the response from the API call to get forecast data
-	console.log(response.data.daily);
+	//console.log(response.data.daily);
+	let forecast = response.data.daily;
 	let forecastElement = document.querySelector("#forecast"); //target the HTML element
 	let forecastHTML = `<div class="row">`; //we want this to be a row because we want a grid
-	let days = ["Thu", "Fri", "Sat"];
-	days.forEach(function (day) {
-		forecastHTML = //now we inject the HTML
-			forecastHTML +
-			`
+
+	//this loops through the objects in the API that show the weather forecast for the coming days
+	//the forEach function returns an index. Index gives each item/day in the array a number from 0 upwards
+	forecast.forEach(function (forecastDay, index) {
+		if (index < 6) {
+			forecastHTML = //now we inject the HTML
+				forecastHTML +
+				`
           <div class="col-2">
-            <div class="weather-forecast-date">${day}</div>
-            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" />
+            <div class="weather-forecast-date">${formatDay(
+							forecastDay.dt
+						)}</div>
+            <img src="http://openweathermap.org/img/wn/${
+							forecastDay.weather[0].icon
+						}@2x.png" />
             <div class="weather-forecast-tmperatures">
-              <span class="weather-forecast-temperature-min">12°</span>
-              <span class="weather-forecast-temperature-max">18°</span>
+              <span class="weather-forecast-temperature-min">${Math.round(
+								forecastDay.temp.min
+							)}°</span>
+              <span class="weather-forecast-temperature-max">${Math.round(
+								forecastDay.temp.max
+							)}°</span>
             </div>
           </div>
           
         `;
+		}
 	});
 
 	forecastHTML = forecastHTML + `</div>`;
