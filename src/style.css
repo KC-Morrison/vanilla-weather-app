@@ -19,7 +19,6 @@ div.weather-app {
 .search-button {
 	background-color: #ec6e4c;
 	color: #fff;
-	width: 100%;
 }
 
 .location-button {
@@ -45,7 +44,7 @@ div.weather-app {
 
 .city-header {
 	font-family: "Bungee Shade", sans-serif;
-	font-size: 40px;
+	font-size: 32px;
 	margin-bottom: 5px;
 }
 

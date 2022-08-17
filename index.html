@@ -24,20 +24,12 @@
         <div class="col-sm-12 col-md-6">
           <form class="search-form" id="search-form">
 
-            <div class="row">
-              <div class="col-12 p-0">
-                <input type="search" placeholder="Type a city..." class="form-control shadow-sm" id="city-input"
+              <div class="input-group">
+               <input type="search" placeholder="Type a city..." class="form-control shadow-sm" id="city-input"
                   autocomplete="off">
-              </div>
-              <div class="col-10 p-0">
                 <input type="submit" value="Search" class="btn shadow-sm search-button">
+                <input type="button" value="📍" class="btn location-button" id="current-location-button">
               </div>
-
-                <div class="col-2 p-0" id="current-location-button">
-                <input type="button" value="📍" class="btn location-button"/>
-              </div>
-            </div>
-
           </form>
         </div>
         <div class="col-sm-12 col-md-6">
@@ -55,12 +47,9 @@
               <p>Humidity <span id="humidity">13</span>% - Wind <span id="wind">18</span> m/s</p>
             </div>
           </div>
-
         </div>
       </div>
       <!--end of row-->
-
-
       <div class="weather-forecast" id="forecast">
         <div class="row">
           <div class="col-2">
@@ -77,6 +66,7 @@
 
       <small class="credits"><a href="https://github.com/KC-Morrison/vanilla-weather-app" target="_blank">Open-source
           code</a> by Katie Morrison</small>
+          
     </div> <!-- end of weather app div-->
   </div> <!-- end of container-->
   <script src="src/app.js"></script>
