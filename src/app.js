@@ -103,6 +103,9 @@ function displayTemperature(response) {
 	lowElement.innerHTML = Math.round(response.data.main.temp_min);
 	highElement.innerHTML = Math.round(response.data.main.temp_max);
 
+	celsiusLink.classList.add("active"); //adds the active class to the C so it doesn't look like a link
+	fahrenheitLink.classList.remove("active"); //removes the active class from the F so it looks like a link
+
 	getForecast(response.data.coord); //we need to get the coordinates for city to do the forecast API call
 }
 
